@@ -4,6 +4,8 @@ import jungleTab from './jungleTab.js';
 import homeTab from './homeTab.js';
 import createPlot from './createPlot.js';
 import plotsCompiler from './PlotClass';
+import coconutsTab from './coconutsTab.js';
+import volcanoTab from './volcanoTab';
 
 export function component() {
 	const page = document.createElement('div');
@@ -24,8 +26,10 @@ export function component() {
 	jungle.addEventListener('click', jungleTab)
 	const coconuts = document.createElement('li');
 	coconuts.textContent = 'Coconuts Beach';
+	coconuts.addEventListener('click', coconutsTab)
 	const volcano = document.createElement('li');
 	volcano.textContent = 'Volcano Island';
+	volcano.addEventListener('click', volcanoTab)
 	const body = document.createElement('div');
 	body.classList.add('body');
 	const testDiv = document.createElement('div');
@@ -58,5 +62,9 @@ let allPlots= [];
 export function appendObject(plotObject) {
 	allPlots.push(plotObject);
 	console.log(allPlots)
+}
+
+export function returnPlots() {
+	return allPlots
 }
 

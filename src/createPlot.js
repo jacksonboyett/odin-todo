@@ -31,7 +31,7 @@ export default function createPlot() {
 		closeButton.textContent = 'X';
 		closeButton.addEventListener('click', closeModal);
 		function closeModal() {
-			modal.style.display = 'none';
+			modal.remove();
 		}
 		inputContainer.appendChild(title);
 		inputContainer.appendChild(nameInput);
